@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+main {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.herobox {
+    width: 1008px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.herobox > h1 {
+    font-size: 76px;
+    font-weight: 400;
+    line-height: 80px;
+    font-family: "Figtree";
+    margin: 20px 0;
+    text-align: center;
+    color: #1D1F1E;
+}
+
+.herobox > button {
+    width: 146px;
+    height: 56px;
+    background-color: #022C22;
+    border-radius: 200px;
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.pinkbox {
+    overflow: hidden;
+    background-color: #FFF7ED;
+    border-radius: 5%;
+    padding: 64px 96px;
+    height: 1028px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.subtitle {
+    height: 36px;
+    width: 100%;
+    border-bottom: 1px solid #D9DEDD;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subtitle > p {
+    font-weight: 500;
+    font-family: "Figtree";
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background: #BEF264;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px; 
+}
+
+.content {
+    width: 100%;
+    height: 808px;
+    display: flex;
+}
+
+.left {
+    width: 45%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left > h1 {
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 68px;
+}
+
+.left > button {
+    width: 165px;
+    height: 56px;
+    border-radius: 200px;
+    border: 1px solid #022C22;
+    background-color: transparent;
+    margin-top: auto;
+}
+
+.right {
+    width: 592px; 
+    height: 100%;
+    gap: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.textbody {
+    width: 592px;
+    gap: 16px;
+}
+
+.textbody > h2 {
+    font-family: "Figtree";
+    height: 24px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    size: 18px;
+    white-space: nowrap;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+}
+.textbody > p {
+    font-family: "Figtree";
+    width: 592px;
+    height: 72px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+}
+.textbody2 > h2 {
+    font-family: "Figtree";
+    width: 568px;
+    height: 48px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+}
+.textbody2 > p {
+    font-family: "Figtree";
+    width: 592px;
+    height: 72px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+}
+
+.blogbox {
+    width: 100%;
+    height: 803px;
+    top: 1700px;
+    border-top: 1px;
+    display: flex;
+}
+
+.headerleft {
+    width: 488px;
+    height: 595px;
+    margin-top: 104px;
+    margin-left: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textcon {
+    width: 488px;
+    height: 212px;
+    gap: 24px;
+}
+
+.textcon > h1 {
+    width: 488px;
+    height: 136px;
+    margin-bottom: 24px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 64px;
+    letter-spacing: -3%;
+    color:#1D1F1E;
+}
+
+.textcon > p {
+    width: 488px;
+    height: 52px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+}
+
+.headerleft > button {
+    width: 101px;
+    height: 56px;
+    border-radius: 200px;
+    border: 1px solid #022C22;
+    background-color: transparent;
+    padding: 16px 24px;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.headerright {
+    width: 592px;
+    height: 595px;
+    margin-top: 104px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column; /* Stack containers vertically */
+}
+
+.container {
+    width: 100%;
+    max-width: 592px;
+    height: 177px;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.image {
+    width: 177px;
+    height: 177px;
+    border-radius: 1px;
+}
+
+.container-content {
+    width: 383px;
+    height: 128px;
+    width: 100%;
+    overflow-wrap: break-word;
+    
+}
+
+.container-content> h2 {
+    height: 72px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -1%;
+}
+
+.bloginfo {
+    width: 235px;
+    height: 32px;
+    margin-top: 24px;
+    gap: 16px;
+    display: flex;
+}
+
+.bloginfo1 {
+    width: 240px;
+    height: 32px;
+    margin-top: 24px;
+    gap: 16px;
+    display: flex;
+}
+.bloginfo2 {
+    width: 100%; /* Take full width for consistent spacing */
+    max-width: 253px;
+    height: 32px;
+    margin-top: 24px;
+    gap: 16px;
+    display: flex;
+}
+
+.bloginfo > p {
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+}
+.bloginfo1 > p {
+    width: 72px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+}
+.bloginfo2 > p {
+    width: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+}
+
+.innerbloginfo {
+    width: 133px;
+    height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.innerbloginfo1 {
+    width: 133px;
+    height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.innerbloginfo2 {
+    width: 133px;
+    height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.innerbloginfo > p {
+    width: 85px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+}
+.innerbloginfo1 > p {
+    width: 85px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+}
+.innerbloginfo2 > p {
+    width: 120px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1F1E;
+    white-space: nowrap;
+}
+
+.blogdot {
+    width: 4px;
+    height: 4px;
+    background-color: #929C9A;
+    align-self: center;
+    border-radius: 50%;
+    display: inline-block;
+    
+}
+
+.FAQ {
+    width: 100%;
+    height: 1318px;
+}
+
+.FAQhead {
+    width: 706px;
+    height: 118px;
+    margin-top: 104px;
+    margin-left: 367px;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.FAQhead > h1 {
+    width: 706px;
+    height: 68px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 68px;
+    letter-spacing: -3%;
+    text-align: center;
+}
+
+.FAQhead > p {
+    width: 706px;
+    height: 26px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.4%;
+    text-align: center;
+    margin-top: 24px;
+    color: #646A69;
+}
+
+.FAQcon {
+    width: 696px;
+    height: 904px;
+    margin-top: 120px;
+    margin-left: 372px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.faq {
+    width: 696px;
+    height: 136px;
+    border-top: 2px solid #BEF264;
+    gap: 16px;
+}
+
+.faq > h2 {
+    width: 568px;
+    height: 24px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #1D1F1E;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    
+}
+
+.faq > p{
+    width: 696px;
+    height: 72px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+
+}
+
+.faq1 {
+    width: 696px;
+    height: 136px;
+    border-top: 2px solid #BEF264;
+    gap: 16px;
+}
+
+.faq1 > h2 {
+    width: 568px;
+    height: 24px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #1D1F1E;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    
+}
+
+.faq1 > p{
+    width: 696px;
+    height: 72px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+}
+
+.faq2 {
+    width: 696px;
+    height: 112px;
+    border-top: 2px solid #BEF264;
+    gap: 16px;
+}
+
+.faq2 > h2 {
+    width: 568px;
+    height: 24px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #1D1F1E;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    
+}
+
+.faq2 > p{
+    width: 696px;
+    height: 48px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+
+}
+.faq3 {
+    width: 696px;
+    height: 160px;
+    border-top: 2px solid #BEF264;
+    gap: 16px;
+}
+
+.faq3 > h2 {
+    width: 568px;
+    height: 48px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #1D1F1E;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    
+}
+
+.faq3 > p{
+    width: 696px;
+    height: 78px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+
+}
+.faq4 {
+    width: 696px;
+    height: 136px;
+    border-top: 2px solid #BEF264;
+    gap: 16px;
+}
+
+.faq4 > h2 {
+    width: 568px;
+    height: 24px;
+    font-family: "Figtree";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #1D1F1E;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    
+}
+
+.faq4 > p{
+    width: 696px;
+    height: 72px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4%;
+    color: #646A69;
+}
+
+.newsletter {
+    width: 100%;
+    height: 452px;
+    background: linear-gradient(to right, #022C22 74%, #FFF7ED 26%);
+    display: flex;
+
+}
+
+.newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+}
+
+
+
+.newsbox {
+    width: 592px;
+    height: 308px;
+    margin-top: 72px;
+    margin-left: 112px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.newsinfo {
+    width: 592px;
+    height: 212px;
+    gap: 24px;
+}
+
+.newsinfo > h1 {
+    width: 592px;
+    height: 136px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 68px;
+    letter-spacing: -3%;
+    color: #FFFFFF;
+    
+}
+
+.newsinfo > p {
+    width: 592px;
+    height: 52px;
+    font-family: "Figtree";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.4%;
+    color: #FFFFFF;
+    margin-top: 24px;
+}
+
+.email {
+    width: 528px;
+    height: 56px;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.email > input {
+    width: 371px;
+    height: 56px;
+    font-family: 'Figtree';
+    border-radius: 200px;
+    border: none;
+}
+
+.email > button {
+    width: 149px;
+    height: 56px;
+    border-radius: 200px;
+    padding: 16px 24px;
+    gap: 10px;
+    border: none;
+    color: #1D1F1E;
+    background-color: #BEF264;
+}
+
+input::placeholder {
+    padding-left: 20px; /* Adjust the value as needed */
+    font-size: 16px;
+}
+
+/* Circle Section */
+.circle-section {
+    width: 452px;
+    height: 452px;
+    border-radius: 50%;
+    background-color: #91CF4F;
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+    margin-left: 70px;
+}
+
+.circle-image {
+    width: 226px; /* Set the desired width */
+    height: 452; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image fills within the circle, cropping if necessary */
+    margin-left: 50%;
+}

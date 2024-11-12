@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Figtree', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            background: #FFFFFF;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 1008px;
+            height: 360px;
+            left: calc(50% - 1008px / 2);
+            padding: 0;
+            top: 140px;
+            gap: 64px;
+        }
+
+        #FAQ {
+            position: absolute;
+            width: 1440px;
+            height: 1060px;
+            left: calc(50% - 1440px / 2);
+            top: 640px;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 1440px;
+            height: 803px;
+            left: 0px;
+            top: 1700px;
+            border-top: 1px;
+            background: #FFFFFF;
+        }
+
+        h1 {
+            font-size: 76px;
+            font-weight: 400;
+            color: black;
+            text-align: center;
+            line-height: 80px;
+            margin: 0;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 10px;
+            width: 149px;
+            height: 56px;
+            background: #022C22;
+            border-radius: 200px;
+            cursor: pointer;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #FFFFFF;
+            border: none;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 64px 96px;
+            gap: 56px;
+            width: 1408px;
+            height: 1028px;
+            top: 16px;
+            left: 16px;
+            background: #FFF7ED;
+            border-radius: 24px;
+        }
+
+        /* Centered FAQ Title */
+        .faq-title-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #D9DEDD;
+            width: 1216px;
+            height: 36px;
+            flex-direction: row;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #BEF264;
+            border-radius: 50%;
+        }
+
+        .faq-title {
+            width: 29px;
+            height: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            color: #1D1F1E;
+            line-height: 20px;
+        }
+
+        /* Left Column for Headline and Button */
+        .faq-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 615.5px;
+            height: 808px;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .faq-headline {
+            width: 488px;
+            height: 204px;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 68px;
+            color: #1D1F1E;
+            margin: 0;
+        }
+
+        .faq-button {
+            display: flex;
+            align-items: center;
+            padding: 16px 24px;
+            width: 165px;
+            height: 56px;
+            border: 1px solid #022C22;
+            border-radius: 200px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: #1D1F1E;
+            gap: 10px;
+        }
+
+        .tail-icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        /* Inner icon styling */
+        .inner-icon {
+            position: absolute;
+            width: 5.25px;
+            height: 10.5px;
+            top: 4.75px;
+            left: 10px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E; /* Border for icon */
+        }
+
+        /* Dash icon styling */
+        .dash-icon {
+            position: absolute;
+            width: 10.5px;
+            height: 0px;
+            top: 10px;
+            left: 4.75px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E;
+        }
+
+        /* Right Column for FAQ Items */
+        .faq-right {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+            width: 592px;
+            height: 808px;
+        }
+
+        .faq-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: #1D1F1E;
+        }
+
+        .faq-answer {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #646A69;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0;
+            gap: 380px;
+            position: absolute;
+            width: 488px;
+            height: 595px;
+            left: 112px;
+            top: 104px;
+        }
+
+        /* Text-Wrapper */
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 24px;
+            margin: 0 auto;
+            width: 488px;
+            height: 212px;
+        }
+
+        .headline {
+            width: 488px;
+            height: 136px;
+            font-family: 'Figtree';
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 68px;
+            letter-spacing: -0.03em;
+            color: #1D1F1E;
+        }
+
+        .description {
+            width: 488px;
+            height: 52px;
+            font-family: 'Figtree';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: -0.004em;
+            color: #646A69;
+        }
+
+        /* Button */
+        .cta-button {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 10px;
+            margin: 0 auto;
+            width: 101px;
+            height: 56px;
+            border: 1px solid #022C22;
+            background: #FFFFFF;
+            border-radius: 200px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 8px;
+            width: 53px;
+            height: 24px;  
+        }
+
+        .label {
+            width: 53px;
+            height: 24px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        /* Tail Icon */
+        .tail-icon {
+            display: none;
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Articles */
+        .articles {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 32px;
+            position: absolute;
+            width: 592px;
+            height: 595px;
+            left: 736px;
+            top: 104px;
+        }
+
+        /* Post */
+        .post {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 32px;
+            width: 592px;
+            height: 177px;
+        }
+
+        /* Image */
+        .post .image-1 {
+            width: 177px;
+            height: 177px;
+            background: url(image-1.png);
+            border-radius: 16px;
+        }
+
+        .post .image-2 {
+            width: 177px;
+            height: 177px;
+            background: url(image-2.png);
+            border-radius: 16px;
+        }
+
+        .post .image-3 {
+            width: 177px;
+            height: 177px;
+            background: url(image-3.png);
+            border-radius: 16px;
+        }
+
+        /* Blog Content Wrapper */
+        .blog-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 24px;
+            width: 383px;
+            height: 128px;
+        }
+
+        .blog-title {
+            width: 383px;
+            height: 72px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -0.01em;
+            color: #1D1F1E;
+        }
+
+        /* Info Wrapper */
+        .info-wrapper-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 235px;
+            height: 32px;
+        }
+
+        .info-wrapper-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 240px;
+            height: 32px;
+        }
+
+        .info-wrapper-3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 253px;
+            height: 32px;
+        }
+
+        /* Author */
+        .author-1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 133px;
+            height: 32px;
+        }
+        
+        .author-2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 132px;
+            height: 32px;
+        }
+
+        .author-3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 16px;
+            width: 150px;
+            height: 32px;
+        }
+
+        /* Ellipse */
+        .ellipse-1 {
+            width: 32px;
+            height: 32px;
+            background: url(Ellipse-1.png);
+        }
+
+        .ellipse-2 {
+            width: 32px;
+            height: 32px;
+            background: url(Ellipse-2.png);
+        }
+
+        .ellipse-3 {
+            width: 32px;
+            height: 32px;
+            background: url(Ellipse-3.png);
+        }
+
+        /* Author Name */
+        .author-name-1 {
+            width: 85px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .author-name-2 {
+            width: 84px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .author-name-3 {
+            width: 102px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        /* Divider */
+        .divider {
+            width: 4px;
+            height: 4px;
+            background: #929C9A;
+        }
+
+        /* Read Time */
+        .read-time-1 {
+            width: 66px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .read-time-2 {
+            width: 72px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .read-time-3 {
+            width: 67px;
+            height: 20px;
+            font-family: 'Figtree';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        #FAQ4 {
+            position: absolute;
+            width: 1440px;
+            height: 1318px;
+            left: 0px;
+            top: 2503px;
+            background: #FFFFFF;
+            border: 1px;
+        }
+
+        .text-wrapper-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 24px;
+            position: absolute;
+            width: 706px;
+            height: 118px;
+            left: calc(50% - 706px/2);
+            top: 104px;
+        }
+
+        .faq-title-2 {
+            align-items: center;
+            position: relative;
+            width: 706px;
+            height: 68px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 68px;
+            text-align: center;
+            letter-spacing: -0.03em;
+            color: #1D1F1E;
+        }
+
+        .description-2 {
+            width: 706px;
+            height: 26px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: -0.004em;
+            color: #646A69;
+        }
+
+        .container-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 56px;
+            position: absolute;
+            width: 696px;
+            height: 904px;
+            left: calc(50% - 696px/2);
+            top: 310px;
+        }
+
+        .faq-wrapper {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 0px 0px;
+            gap: 16px;
+            width: 696px;
+            height: 136px;
+            border-top: 2px solid #BEF264;
+            align-self: stretch;
+        }
+
+        .faq-question-2 {
+            width: 568px;
+            height: 24px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .faq-question-3 {
+            width: 568px;
+            height: 48px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .faq-answer-2 {
+            width: 696px;
+            height: 72px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #646A69;
+            order: 1;
+            align-self: stretch;
+        }
+
+        .newsletter {
+            position: absolute;
+            width: 1440px;
+            height: 452px;
+            left: 0px;
+            top: 3821px;
+            background: #022C22;
+        }
+
+        .image-4 {
+            position: absolute;
+            width: 600px;
+            height: 452px;
+            left: 840px;
+            top: 0px;
+        }
+
+        .subtract {
+            position: absolute;
+            width: 226px;
+            height: 452px;
+            left: 1066px;
+            top: 0px;
+            background: url(image-4.png);
+
+        }
+
+        .subtract-background {
+            position: absolute;
+            width: 452px;
+            height: 452px;
+            right: 374px;
+            top: 0px;
+            background: #BEF264;
+        }
+
+        .subtract-photo {
+            position: absolute;
+            width: 452px;
+            height: 452px;
+            left: 840px;
+            top: 0px;
+            border-radius: 500px;
+        }
+
+        .background {
+            position: absolute;
+            width: 374px;
+            height: 452px;
+            right: 0px;
+            top: 0px;
+            background: #FFF7ED;
+        }
+
+        .photo {
+            position: absolute;
+            width: 452px;
+            height: 452px;
+            left: 840px;
+            top: 0px;
+            background: #BEF264;
+            border-radius: 500px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 40px;
+            position: absolute;
+            width: 592px;
+            height: 308px;
+            left: 112px;
+            top: calc(50% - 308px/2);
+        }
+
+        .content-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 24px;
+            width: 592px;
+            height: 212px;
+        }
+
+        .content-text-1 {
+            width: 592px;
+            height: 136px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 62px;
+            line-height: 68px;
+            letter-spacing: -0.03em;
+            color: #FFFFFF;
+        }
+
+        .content-text-2 {
+            width: 592px;
+            height: 52px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: -0.004em;
+            color: rgba(255, 255, 255, 0.8);
+            order: 1;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            width: 528px;
+            height: 56px;
+            order: 1;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+            width: 371px;
+            height: 56px;
+            flex-grow: 1;
+        }
+
+        .input-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+            width: 371px;
+            height: 56px; 
+            flex-grow: 1;
+        }
+
+        .input-text {
+            width: 34px;
+            height: 20px;
+            gap: 0px;
+            opacity: 0px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.004em;
+        }
+
+        .input-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            width: 371px;
+            height: 56px;
+            order: 1;
+            align-self: stretch;
+        }
+
+        .input-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px 20px;
+            gap: 8px;
+            width: 371px;
+            height: 56px;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 2px rgba(2, 44, 34, 0.08), 0px 0px 0px 1px rgba(2, 44, 34, 0.13);
+            border-radius: 200px;
+            align-self: stretch;
+        }
+
+        .user {
+            width: 20px;
+            height: 20px;
+            gap: 0px;
+        }
+
+        .input-content-vector {
+            width: 6px;
+            height: 6px;
+            top: 3.25px;
+            left: 7px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E;
+        }
+
+        .input-content-icon {
+            width: 12px;
+            height: 4.5px;
+            top: 12.25px;
+            left: 4px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E;
+        }
+
+        .input-content-text {
+            width: 331px;
+            height: 24px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #646A69;
+            order: 1;
+            flex-grow: 1;
+        }
+
+        .eye-icon {
+            width: 20px;
+            height: 20px;
+            padding: 4px 1.75px 4px 1.75px;
+            gap: 0px;
+        }
+
+        .eye-vector {
+            width: 16.5px;
+            height: 12px;
+            top: 4px;
+            left: 1.75px;
+            gap: 0px;
+            border: 1.5px solid #646A69 ;
+        }
+
+        .hint-content {
+            width: 300px;
+            height: 20px;
+            padding: 2px 20px;
+            gap: 10px;
+        }
+
+        .hint-text {
+            width: 260px;
+            height: 16px;
+            gap: 0px;
+            opacity: 0px;
+            font-family: Figtree;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+        }
+
+        .input-button-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 10px;
+            width: 149px;
+            height: 56px;
+            background: #BEF264;
+            border-radius: 200px;
+            order: 1;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+            width: 101px;
+            height: 24px;
+        }
+
+        .button-label {
+            width: 101px;
+            height: 24px;
+            font-family: 'Figtree';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.004em;
+            color: #1D1F1E;
+        }
+
+        .button-tail-icon {
+            width: 20px;
+            height: 20px;
+            gap: 0px;
+            opacity: 0px;
+        }
+
+        .input-tail-icon {
+            width: 5.25px;
+            height: 10.5px;
+            top: 4.75px;
+            left: 10px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E;
+        }
+
+        .input-dash-icon {
+            width: 10.5px;
+            height: 0px;
+            top: 10px;
+            left: 4.75px;
+            gap: 0px;
+            border: 1.5px solid #1D1F1E;
+            opacity: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>
+            Our Commitment to green energy is paving the way for a cleaner, healthier planet.
+        </h1>
+        <button>
+            Get in touch
+        </button>
+    </section>
+
+    <section id="FAQ">
+        <div class="faq-container">
+            <!-- Centered Title and Dot -->
+            <div class="faq-title-container">
+                <div class="dot"></div>
+                <div class="faq-title">FAQ</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; width: 1216px; height: 808px;">
+                <!-- Left Column -->
+                <div class="faq-left">
+                    <div class="faq-headline">Answers to the frequently asked questions.</div>
+                    <div class="faq-button">
+                        Contact Us
+                        <span class="tail-icon">
+                            <span class="dash-icon"></span>
+                            <span class="inner-icon"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="faq-right">
+                    <div class="faq-item">
+                        <div class="faq-question">What is green energy?</div>
+                        <div class="faq-answer">Green energy, also known as renewable energy, is derived from natural sources that are replenished on a human timescale. This includes solar, wind, hydro, geothermal, and biomass energy, among others.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How does green energy benefit the environment?</div>
+                        <div class="faq-answer">Green energy reduces the reliance on fossil fuels, lowering greenhouse gas emissions and mitigating climate change. It also helps conserve natural resources and promotes a cleaner, sustainable future.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What green energy solutions does your company offer?</div>
+                        <div class="faq-answer">We provide a range of green energy solutions, including solar power systems, wind turbines, energy-efficient appliances, and smart home technologies to enhance energy sustainability.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What support services do you offer after installing green energy solutions?</div>
+                        <div class="faq-answer">We offer ongoing maintenance, monitoring, and support services to ensure the optimal performance and longevity of your green energy system. Our team is ready to assist with any issues that may arise.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How do solar panels work?</div>
+                        <div class="faq-answer">Solar panels convert sunlight into electricity through photovoltaic cells. These cells generate direct current (DC), which is then converted into usable alternating current (AC) for household or commercial use.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="blog-container">
+            <div class="header">
+                <div class="text-wrapper">
+                  <div class="headline">Learn more from our blog</div>
+                  <div class="description">Our team boasts top green energy experts, driving innovation in sustainability.</div>
+                  <button class="cta-button">
+                    <div class="container">
+                      <span class="label">See all</span>
+                      <div class="tail-icon"></div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            
+              <div class="articles">
+                    <div class="post">
+                        <div class="image-1"></div>
+                        <div class="blog-content-wrapper">
+                            <div class="blog-title">Wind Power: A Breath of Fresh Air for Clean Energy Enthusiasts</div>
+                            <div class="info-wrapper-1">
+                                <div class="author-1">
+                                    <div class="ellipse-1"></div>
+                                    <span class="author-name-1">Wade Warren</span>
+                                </div>
+                                <div class="divider"></div>
+                                <span class="read-time-1">7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="image-2"></div>
+                        <div class="blog-content-wrapper">
+                            <div class="blog-title">From Trash to Treasure: The Promising World of Biomass Energy</div>
+                            <div class="info-wrapper-2">
+                                <div class="author-2">
+                                    <div class="ellipse-2"></div>
+                                    <span class="author-name-2">Jenny Wilson</span>
+                                </div>
+                                <div class="divider"></div>
+                                <span class="read-time-2">12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post">
+                        <div class="image-3"></div>
+                        <div class="blog-content-wrapper">
+                            <div class="blog-title">Hydrogen: Fueling the Green Energy Revolution</div>
+                            <div class="info-wrapper-3">
+                                <div class="author-3">
+                                    <div class="ellipse-3"></div>
+                                    <span class="author-name-3">Leslie Alexander</span>
+                                </div>
+                                <div class="divider"></div>
+                                <span class="read-time-3">5 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="FAQ4">
+        <div class="text-wrapper-2">
+            <div class="faq-title-2">FAQ</div>
+            <div class="description-2">Here you will find the answers to the frequently asked questions.</div>
+        </div>
+
+        <div class="container-2">
+            <div class="faq-wrapper">
+                <div class="faq-question-2">What is green energy?</div>
+                <div class="faq-answer-2">Green energy, also known as renewable energy, is derived from natural sources that are replenished on a human timescale. This includes solar, wind, hydro, geothermal, and biomass energy, among others.</div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-question-2">How does green energy benefit the environment?</div>
+                <div class="faq-answer-2">Green energy reduces the reliance on fossil fuels, lowering greenhouse gas emissions and mitigating climate change. It also helps conserve natural resources and promotes a cleaner, sustainable future.</div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-question-2">What green energy solutions does your company offer?</div>
+                <div class="faq-answer-2">We provide a range of green energy solutions, including solar power systems, wind turbines, energy-efficient appliances, and smart home technologies to enhance energy sustainability.</div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-question-3">What support services do you offer after installing green energy solutions?</div>
+                <div class="faq-answer-2">We offer ongoing maintenance, monitoring, and support services to ensure the optimal performance and longevity of your green energy system. Our team is ready to assist with any issues that may arise.</div>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-question-2">How do solar panels work?</div>
+                <div class="faq-answer-2">Solar panels convert sunlight into electricity through photovoltaic cells. These cells generate direct current (DC), which is then converted into usable alternating current (AC) for household or commercial use.</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="newsletter">
+            <div class="image-4">
+                <div class="subtract">
+                    <div class="subtract-background"></div>
+                    <div class="subtract-photo"></div>
+                </div>
+
+                <div class="background"></div>
+                <div class="photo"></div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="content-text-wrapper">
+                    <div class="content-text-1">Your Source for Green Energy Updates</div>
+                    <div class=content-text-2>Stay in the loop with our Green Horizon newsletter, where we deliver bite-sized insights into the latest green energy solutions.</div>
+                </div> 
+            </div>
+
+            <div class="form">
+                <div class="input">
+                    <div class="input-label">
+                        <div class="input-text">Label</div>
+                    </div>
+
+                    <div class="input-content-wrapper">
+                        <div class="input-content">
+                            <div class="user">
+                                <span class="input-content-vector"></span>
+                                <span class="input-content-icon"></span>
+                            </div>
+
+                            <div class="input-content-text">Your e-mail...</div>
+
+                            <div class="eye-icon">
+                                <span class="eye-vector"></span>
+                            </div>
+                        </div>
+
+                        <div class="hint-content">
+                            <div class="hint-text">This is a hint text to help user.</div>
+                        </div>
+                    </div>
+
+                    <div class="input-button-wrapper">
+                        <div class="button-container">
+                            <div class="button-label">Get in Touch</div>
+                            <div class="button-tail-icon">
+                                <span class="input-tail-icon"></span>
+                                <span class="input-dash-icon"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
